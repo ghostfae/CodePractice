@@ -1,0 +1,96 @@
+Computer Systems
+
+StudySmarter definition:
+"A computer system is a complex configuration composed of hardware, software, and additional equipment designed to work in synchrony to 
+facilitate data processing. The system is characterized by an input component, a processing unit, and an output component."
+
+Components:
+	Input Devices; Central Processing Unit (CPU); Memory (RAM); Storage (SSD); Output
+	CPU "fetches" from memory, "decodes" the instruction, and "executes" the instruction
+	
+///////////////
+	
+Differences in Languages:
+	Low-Level Language - Closer to machine code, machine-dependent, requires knowledge of the hardware
+	
+	High-Level Language - Easy for people to read and understand, however takes more steps to convert into binary/machine code
+	the difference is in "degrees of separation from the raw machine code"
+	
+	Object-Oriented Programming - focuses on objects ("collection of fields", wikipedia) interacting with one another
+		- Abstraction (methods and data are stored within objects, other objects cannot directly access that data)
+		- Encapsulation (
+		- Ineritance (a child class/object inherits from a parent class/object)
+		- Polymorphism (one name can have multiple functions; overriding and overloading processes)
+			e.g. Java, C++, Python
+			
+	Functional Programming - 
+		
+			e.g.
+			
+	Procedural Programming -
+		A series of instructions, breaks programs into small modules/functions, one rule after another
+			e.g. C, Pascal, Fortran
+	
+/////////////////
+
+Tools for Coding:
+	CLI - Command Line Interface/Command Language Interpreter
+		contained in a 'shell', which has the visual interface that its user enters commands into
+		
+	GUI - Graphical User Interface 
+	
+	IDE - Integrated Development Environment
+		a program for coding that combines features such as an editor, debugger, loader...	
+
+////////////////
+
+Build Process:
+	Compiler - program that translates human code into machine code
+	
+	Binaries - "compiled code that allow a program to be installed without having to compile the source code."
+		
+	Garbage Collection - 
+	"The garbage collector is responsible for identifying objects in the program’s memory
+	that are no longer being used by the program.
+	It does this by periodically scanning the memory and marking any unused objects for deletion.
+    Once these objects are marked, the garbage collector frees up the memory that they were occupying,
+	making it available for use by other objects.
+
+    There are two main types of garbage collection in C#: mark-and-sweep and reference counting."
+		- Mark-And-Sweep: marks every object that is in use by the program, frees memory of any unmarked objects
+		- Reference Counting: counts the number of references to each object in memory, frees memory of objects that have zero references
+	
+	Memory Leaks - "A memory leak occurs when allocated memory is not properly deallocated, 
+	resulting in memory being reserved but no longer accessible for other processes"
+
+	
+/////////////
+
+File Types:
+	
+	.lib - Static Library
+		"a set of routines, external functions and variables" that is copied to an executable
+		alternative to dll, however must be copied and compiled each time the program is run
+		does not create dependency as it is a copy
+		
+	.dll - Dynamic Link Library
+		"contains code and data that can be used by more than one program at the same time"; a shared library
+		creates dependency as it is a reference, technically
+
+	.bin - Binary File
+		"file format that contains information", referred to as a "non-text file"
+		sequence of bytes, can be binaries OR images, sounds, compressed files etc.
+	
+	.exe - Executable
+		a program with an "entry point"; the file that runs the software
+		
+//////////
+
+Data Types:
+
+	Primitive Data Type - a static variable;
+		it has a fixed value, and is its own copy
+	Reference Data Type - a dynamic variable;
+		it points to a primitive value - if the primitive changes, so does the reference
+		
+	Boxing/Wrapping - storing a primitive value in an object so it can be referenced later? -> research
