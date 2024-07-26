@@ -10,11 +10,11 @@ namespace RemoveFirstLast
       [Test]
       public void Test1()
       {
-         StringAssert.AreEqualIgnoringCase("loquen", Kata.Remove_char("eloquent"));
-         StringAssert.AreEqualIgnoringCase("ountr", Kata.Remove_char("country"));
-         StringAssert.AreEqualIgnoringCase("erso", Kata.Remove_char("person"));
-         StringAssert.AreEqualIgnoringCase("lac", Kata.Remove_char("place"));
-         StringAssert.AreEqualIgnoringCase("", Kata.Remove_char("ok"));
+         StringAssert.AreEqualIgnoringCase("loquen", Kata.RemoveChar("eloquent"));
+         StringAssert.AreEqualIgnoringCase("ountr", Kata.RemoveChar("country"));
+         StringAssert.AreEqualIgnoringCase("erso", Kata.RemoveChar("person"));
+         StringAssert.AreEqualIgnoringCase("lac", Kata.RemoveChar("place"));
+         StringAssert.AreEqualIgnoringCase("", Kata.RemoveChar("ok"));
       }
    }
 }

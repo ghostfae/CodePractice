@@ -1,12 +1,11 @@
-﻿namespace RemoveFirstLast
-{
-   internal class Kata
-   { public static string Remove_char(string s)
-      {
-         s = s.Remove(0, 1);
-         s = s.Remove(s.Length - 1, 1);
+﻿namespace RemoveFirstLast;
 
-         return s;
-      }
+internal class Kata
+{ 
+   public static string RemoveChar(string s)
+   {
+      s = s.Substring(1, s.Length - 2);
+
+      return s;
    }
 }
