@@ -9,10 +9,10 @@ internal class Kata
 
    public static string SmashLoop(string[] words)
    {
-      string newString = words[0];
-      if (string.IsNullOrEmpty(newString))
+      if (words == null || words.Length == 0)
          return string.Empty;
 
+      string newString = words[0];
       for (int i = 1; i < words.Length; i++)
       { 
          newString += ' ' + words[i];
