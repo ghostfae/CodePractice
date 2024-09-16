@@ -1,16 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 
 public class SnailSolution
 {
+   private static int? InnerArraySize(int[][] array)
+   {
+      foreach (var inner in array)
+      {
+         if (inner.Length != array.Length) 
+            return null;
+      }
+      return array.Length;
+   }
+
    public static int[] Snail(int[][] array)
    {
+      if (InnerArraySize(array) == null)
+      {
+         throw new ArgumentException("input array should have equal sizes");
+      }
+      
       var snailList = new List<int>();
       var size = array.Length;
-
       if (size > 0)
       {
-
          int row = 0;
          int column = 0;
 
@@ -42,5 +54,4 @@ public class SnailSolution
          result.Add(array[row][column]);
       }
    }
-
 }
