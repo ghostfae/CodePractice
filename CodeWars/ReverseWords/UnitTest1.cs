@@ -1,12 +1,8 @@
-namespace ReverseWords
-{
-   using NUnit.Framework;
-   using System;
-    
-   [TestFixture]
-   public class ReverseWordsTests
-   {
+namespace ReverseWords;
 
+[TestFixture]
+public class ReverseWordsTests
+{
    [Test]
    public void BasicTests()
    {
@@ -21,6 +17,4 @@ namespace ReverseWords
       Assert.AreEqual("nahsirk", kata.ReverseLetter("krish21an"));
 
    }
-
-}
 }
