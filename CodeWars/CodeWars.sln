@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snail", "Snail\Snail.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnailTwo", "SnailTwo\SnailTwo.csproj", "{B2C4AA4D-DAAE-4376-ABC7-87BA90BF0AAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryKata", "BinaryKata\BinaryKata.csproj", "{0558417D-2998-4FD3-8DDE-237BBC501274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B2C4AA4D-DAAE-4376-ABC7-87BA90BF0AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C4AA4D-DAAE-4376-ABC7-87BA90BF0AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2C4AA4D-DAAE-4376-ABC7-87BA90BF0AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0558417D-2998-4FD3-8DDE-237BBC501274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0558417D-2998-4FD3-8DDE-237BBC501274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0558417D-2998-4FD3-8DDE-237BBC501274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0558417D-2998-4FD3-8DDE-237BBC501274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
