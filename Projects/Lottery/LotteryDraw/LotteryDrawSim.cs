@@ -1,4 +1,4 @@
-﻿namespace LotteryDraw;
+﻿namespace Lottery;
 
 public class LotteryDrawSim
 {

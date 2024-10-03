@@ -1,4 +1,4 @@
-﻿namespace LotteryDraw;
+﻿namespace Lottery;
 
 public class Person(string firstName, int id)
 {

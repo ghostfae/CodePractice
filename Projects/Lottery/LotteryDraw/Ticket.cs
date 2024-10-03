@@ -1,19 +1,14 @@
-﻿namespace LotteryDraw;
+﻿namespace Lottery;
 
 public class Ticket (IReadOnlyCollection<int> numbers)
 {
    public readonly IReadOnlyCollection<int> Numbers = numbers;
    public override bool Equals(object? obj)
    {
-      if (obj is not Ticket ticket) return false;
-      if (ticket == this) return true;
+      if (obj == null || !(obj is Ticket ticket))
+         return false;
 
-      return Equals(ticket);
-   }
-
-   protected bool Equals(Ticket other)
-   {
-      return Numbers.Equals(other.Numbers);
+      return (Numbers == ticket.Numbers);
    }
 
    public override int GetHashCode()
