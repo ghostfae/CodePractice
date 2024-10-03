@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj": {}
+    "C:\\Users\\Kat\\Documents\\GitHub\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj": {}
   },
   "projects": {
-    "C:\\src\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj": {
+    "C:\\Users\\Kat\\Documents\\GitHub\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj",
+        "projectUniqueName": "C:\\Users\\Kat\\Documents\\GitHub\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj",
         "projectName": "ReverseWords",
-        "projectPath": "C:\\src\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj",
+        "projectPath": "C:\\Users\\Kat\\Documents\\GitHub\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj",
         "packagesPath": "C:\\Users\\Kat\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\CodePractice\\CodeWars\\ReverseWords\\obj\\",
+        "outputPath": "C:\\Users\\Kat\\Documents\\GitHub\\CodePractice\\CodeWars\\ReverseWords\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
