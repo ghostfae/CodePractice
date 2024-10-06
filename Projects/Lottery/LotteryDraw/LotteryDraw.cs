@@ -12,25 +12,50 @@ public enum WinKind
 
 public static class LotteryDraw
 {
-   public static List<(Person person, WinKind winKind)> GetWinners(IReadOnlyCollection<(Person person, Ticket ticket)> peopleCollection, Ticket winningTicket)
+   public static IReadOnlyCollection<(Person person, WinKind winKind)> GetWinners(IReadOnlyCollection<(Person person, Ticket ticket)> peopleCollection, Ticket winningTicket)
    {
-      var winners = new List<(Person person, WinKind winKind)>();
+      return GetWinnersImpl(peopleCollection, winningTicket).ToArray();
+   }
 
+   public static IEnumerable<Person> GetThirdPrizeWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winnerCollection)
+   {
+      foreach (var (person, winKind) in winnerCollection.Where(p => p.winKind == WinKind.ThirdPrize))
+      {
+         yield return person;
+      }
+   }
+
+   public static IEnumerable<Person> GetSecondPrizeWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winnerCollection)
+   {
+      foreach (var (person, winKind) in winnerCollection.Where(p => p.winKind == WinKind.SecondPrize))
+      {
+         yield return person;
+      }
+   }
+
+   public static IEnumerable<Person> GetFirstPrizeWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winnerCollection)
+   {
+      foreach (var (person, winKind) in winnerCollection.Where(p => p.winKind == WinKind.FirstPrize))
+      {
+         yield return person;
+      }
+   }
+
+   private static IEnumerable<(Person person, WinKind winKind)> GetWinnersImpl(IReadOnlyCollection<(Person person, Ticket ticket)> peopleCollection, Ticket winningTicket)
+   {
       foreach (var (person, ticket) in peopleCollection)
       {
          var winKind = GetWin(GetMatches(ticket, winningTicket));
          if (winKind != WinKind.None)
          {
-            winners.Add((person, winKind));
+            yield return (person, winKind);
          }
       }
-
-      return winners;
    }
+
 
    public static WinKind GetWin(int matches)
    {
-
       switch (matches)
       {
          case 5:
