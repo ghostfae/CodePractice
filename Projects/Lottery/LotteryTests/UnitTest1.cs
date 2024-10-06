@@ -7,9 +7,8 @@ public class Tests
    public void TicketEquality()
    {
       var ticket1 = new Ticket([1, 2, 3]);
-      var ticket2 = new Ticket([1, 2, 3]);
-      Assert.That(ticket1 == ticket2);
-      // NOT WORK, WHY
+      var ticket2 = new Ticket([3, 1, 2]);
+      Assert.That(ticket1.Equals(ticket2));
    }
 
    [Test]

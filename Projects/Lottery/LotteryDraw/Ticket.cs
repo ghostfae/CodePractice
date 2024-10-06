@@ -1,19 +1,26 @@
 ﻿namespace Lottery;
 
-public class Ticket (IReadOnlyCollection<int> numbers)
+public class Ticket
 {
-   public readonly IReadOnlyCollection<int> Numbers = numbers;
+   public IReadOnlyCollection<int> Numbers => _numbers;
+   private readonly HashSet<int> _numbers;
+
+   public Ticket(IEnumerable<int> numbers)
+   {
+      _numbers = numbers.ToHashSet();
+   }
+
    public override bool Equals(object? obj)
    {
       if (obj == null || !(obj is Ticket ticket))
          return false;
 
-      return (Numbers == ticket.Numbers);
+      return _numbers.SetEquals(ticket._numbers);
    }
 
    public override int GetHashCode()
    {
-      return Numbers.GetHashCode();
+      return _numbers.GetHashCode();
    }
 
 
