@@ -5,14 +5,6 @@ public class LotteryDrawSim (Random random,
    int selectedNumbersAmount, int totalNumbers,
    int totalPlayers, int maxTicketsPerPerson)
 {
-   public IReadOnlyCollection<(Person person, WinKind winKind)> SimulateDraw
-      (List<(Person, Ticket)> players)
-   {
-      var winningTicket = GenerateTicket();
-
-      return LotteryDraw.GetWinners(players, winningTicket);
-   }
-
    public List<(Person, Ticket)> SimulatePlayers()
    {
       var list = new List<(Person, Ticket)> ();
@@ -33,9 +25,9 @@ public class LotteryDrawSim (Random random,
       return list;
    }
 
-   private Ticket GenerateTicket()
+   public Ticket GenerateTicket()
    {
-      return new Ticket(GenerateTicketNumbers());
+      return ticketFactory.GenerateTicket(GenerateTicketNumbers());
    }
 
    private IReadOnlyCollection<int> GenerateTicketNumbers()
