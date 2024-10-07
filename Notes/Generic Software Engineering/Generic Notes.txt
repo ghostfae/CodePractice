@@ -1,0 +1,32 @@
+Generic Notes -
+
+- Hashset is a readonlycollection; doesnt care about order, guarantees uniqueness
+- Why use properties instead of fields? -> 
+- difference btw sequence and collection -> all collections are sequences, but not vice versa; collection is already stored memory
+
+- LINQ is lazy because ....; opposite is eager (F# might use it?)
+
+- hashset doesn't Order; ignores the order instead of imposes;
+
+- yield return is better "for purity", but list iteration is faster
+
+- lambda
+///
+
+- timespan is a 'long'
+
+- what are stack traces?
+
+- strategy design pattern
+
+- delegate ?
+///
+
+Interfaces and base classes represent two different forms of relationships.
+
+Inheritance (base classes) represent an "is-a" relationship.
+	E.g. a dog or a cat "is-a" pet. 
+This relationship always represents the (single) purpose of the class (in conjunction with the "single responsibility principle").
+
+Interfaces, on the other hand, represent additional features of a class.
+	"is" relationship, like in "Foo is disposable", hence the IDisposable interface in C#.

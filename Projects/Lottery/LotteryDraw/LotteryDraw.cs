@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Lottery;
+﻿namespace Lottery;
 
 public enum WinKind
 {
@@ -16,6 +14,20 @@ public static class LotteryDraw
    {
       return GetWinnersImpl(peopleCollection, winningTicket).ToArray();
    }
+   //public static List<(Person person, WinKind winKind)> GetWinners
+   //   (IReadOnlyCollection<(Person person, Ticket ticket)> peopleCollection, Ticket winningTicket)
+   //{
+   //   var list = new List<(Person, WinKind)>();
+   //   foreach (var (person, ticket) in peopleCollection)
+   //   {
+   //      var winKind = GetWin(GetMatches(ticket, winningTicket));
+   //      if (winKind != WinKind.None)
+   //      {
+   //         list.Add((person, winKind));
+   //      }
+   //   }
+   //   return list;
+   //}
 
    public static IEnumerable<Person> GetThirdPrizeWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winnerCollection)
    {
