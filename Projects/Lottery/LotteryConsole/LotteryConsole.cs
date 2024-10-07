@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Lottery;
 namespace LotteryConsole;
 
@@ -8,10 +9,9 @@ internal class LotteryConsole
    {
       // STOPWATCH
       Stopwatch timer = new Stopwatch();
-      
 
       // SETUP - creating classes and variables
-      var random = new Random(1122);
+      var random = new Random(1122); // first seed that has two winners
       var personFactory = new PersonFactory();
       var ticketFactory = new TicketFactory();
 
@@ -31,12 +31,8 @@ internal class LotteryConsole
       var allTickets = sim.SimulatePlayers();
 
       // CONSOLE INITIALISATION
-      Console.WriteLine($"Lottery draw for {ticketNumbers} out of {totalNumbers}.");
-      Console.WriteLine($"We have {totalPlayers} players today, with a whopping total of {allTickets.Count} tickets!");
-      Console.WriteLine($"Tickets cost £{ticketCost} each, and you can buy up to {maxTicketsPerPerson} tickets per person!");
-      Console.WriteLine($"Our third prize is £{thirdPrizeMoney}, and our second is £{secondPrizeMoney}.");
-      Console.WriteLine($"Good luck!");
-      Console.WriteLine();
+      Log.InitialLog(ticketNumbers, totalNumbers, totalPlayers, allTickets.Count,
+         ticketCost, maxTicketsPerPerson, thirdPrizeMoney, secondPrizeMoney);
 
       // LOTTERY DRAW SIMULATION
       var winningTicket = sim.GenerateTicket();
@@ -62,19 +58,8 @@ internal class LotteryConsole
 
 
       // DISPLAYING VALUES
-      Console.WriteLine($"Main prize winner/s for {firstPrizeTotal:C} each:");
-      foreach (var person in firstPrizeWinners)
-      {
-         Console.WriteLine(person);
-      }
+      Log.WinningLog(firstPrizeTotal, firstPrizeWinners, secondPrizeTotal, secondPrizeWinners.Count, thirdPrizeTotal, thirdPrizeWinners.Count);
 
-      Console.WriteLine();
-      Console.WriteLine($"Total second prize spend is {secondPrizeTotal:C}, between {secondPrizeWinners.Count()} people");
-      Console.WriteLine($"Total third prize spend is {thirdPrizeTotal:C} between {thirdPrizeWinners.Count()} people");
-
-      var process = "Sim";
-      var ts = timer.Elapsed.TotalSeconds;
-
-      Console.WriteLine($"Time elapsed for {process} is {ts}s");
+      Log.Timer("Simulation", timer.Elapsed.TotalSeconds);
    }
 }
