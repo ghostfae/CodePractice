@@ -1,5 +1,5 @@
 Lottery Notes -
-
+TODO: Config for sim
 -------------------------
 500,000 participants:
 SEED:
@@ -31,27 +31,14 @@ SEED:
 RESULTS:
 Seed 1, 2.83 seconds
 -------------------------
-//public class Ticket
+//public class Ticket_HashSet
 //{
-//   //public IReadOnlyCollection<int> Numbers => _numbers;
-//   public ulong NumbersULong;
+//   public IReadOnlyCollection<int> Numbers => _numbers;
 //   private readonly HashSet<int> _numbers;
-
-//   public ulong ToUlong()
-//   {
-//      ulong val = ulong.MinValue;
-//      foreach (var number in _numbers)
-//      {
-//         val += (ulong)number;
-//      }
-
-//      return val;
-//   }
 
 //   public Ticket(IEnumerable<int> numbers)
 //   {
 //      _numbers = numbers.ToHashSet();
-//      NumbersULong = ToUlong();
 //   }
 
 //   public override bool Equals(object? obj)
@@ -70,11 +57,11 @@ Seed 1, 2.83 seconds
 
 //   public override string ToString()
 //   {
-//      return string.Join(", ", NumbersULong);
+//      return string.Join(", ", Numbers);
 //   }
 
 //   public int GetMatches(Ticket winningTicket)
 //   {
-//      return NumbersULong.CompareTo(winningTicket.NumbersULong);
+//      return Numbers.Count(i => winningTicket.Numbers.Contains(i));
 //   }
 //}

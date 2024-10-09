@@ -1,17 +1,16 @@
 ﻿namespace Lottery;
 
 public class LotteryDrawSim (Random random, TicketFactory ticketFactory,
-   int selectedNumbersAmount, int totalNumbers,
-   int totalPlayers, int maxTicketsPerPerson)
+   DrawConfig config)
 {
-   public List<(int, Ticket)> SimulatePlayers()
+   public List<(int, ITicket)> SimulatePlayers()
    {
-      var list = new List<(int, Ticket)> ();
+      var list = new List<(int, ITicket)> ();
 
       var currentPlayers = 0;
-      while (currentPlayers < totalPlayers)
+      while (currentPlayers < config.TotalPlayers)
       {
-         var ticketsBought = random.Next(1, maxTicketsPerPerson);
+         var ticketsBought = random.Next(1, config.MaxTicketsPerPerson);
          for (var i = 0; i < ticketsBought; i++)
          {
              list.Add((currentPlayers, GenerateTicket()));
@@ -22,7 +21,7 @@ public class LotteryDrawSim (Random random, TicketFactory ticketFactory,
       return list;
    }
 
-   public Ticket GenerateTicket()
+   public ITicket GenerateTicket()
    {
       return ticketFactory.GenerateTicket(GenerateTicketNumbers());
    }
@@ -30,9 +29,9 @@ public class LotteryDrawSim (Random random, TicketFactory ticketFactory,
    private IReadOnlyCollection<int> GenerateTicketNumbers()
    {
       var list = new List<int>();
-      while (list.Count < selectedNumbersAmount)
+      while (list.Count < config.TicketNumbers)
       {
-         var number = random.Next(1, totalNumbers);
+         var number = random.Next(1, config.TotalNumbers);
          if (!list.Contains(number))
          {
             list.Add(number);

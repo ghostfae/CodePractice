@@ -20,6 +20,23 @@ Generic Notes -
 - strategy design pattern
 
 - delegate ?
+
+ireadonlycollection - concrete object that is constructable; interface is a narrower view of object functionality (ireadonly collection), 
+create array, pass as readonlycollection - cannot be edited  as an object
+
+random access VS serial access - reflected in data types, in design
+random - choose the position of elements yu want to access
+serial - get it one by one
+
+ienum - simplest collection - .tolist/array/creates a copy
+then ireadonlycollection
+
+tuples, anonymous objects: 
+tuple deconstruction
+
+design process - iterative/evolving design
+
+
 ///
 
 Interfaces and base classes represent two different forms of relationships.

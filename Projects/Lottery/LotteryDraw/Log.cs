@@ -7,25 +7,27 @@ public static class Log
       Console.WriteLine("Starting...");
    }
 
-   public static void InitialLog(int ticketNumbers, int totalNumbers, int totalPlayers, int allTickets,
-      int ticketCost, int maxTicketsPerPerson, int thirdPrizeMoney, int secondPrizeMoney)
+   public static void InitialLog(DrawConfig lConfig, MoneyConfig mConfig, int allTickets)
    {
-      Console.WriteLine($"Lottery draw for {ticketNumbers} out of {totalNumbers}.");
-      Console.WriteLine($"We have {totalPlayers} players today, with a whopping total of {allTickets} tickets!");
-      Console.WriteLine($"Tickets cost £{ticketCost} each, and you can buy up to {maxTicketsPerPerson} tickets per person!");
-      Console.WriteLine($"Our third prize is £{thirdPrizeMoney}, and our second is £{secondPrizeMoney}.");
+      Console.WriteLine($"Lottery draw for {lConfig.TicketNumbers} out of {lConfig.TotalNumbers}.");
+      Console.WriteLine($"We have {lConfig.TotalPlayers} players today, with a whopping total of {allTickets} tickets!");
+      Console.WriteLine($"Tickets cost £{mConfig.TicketCost} each, and you can buy up to {lConfig.MaxTicketsPerPerson} tickets per person!");
+      Console.WriteLine($"Our third prize is £{mConfig.ThirdPrizeMoney}, and our second is £{mConfig.SecondPrizeMoney}.");
       Console.WriteLine($"Good luck!");
       Console.WriteLine();
    }
 
-   public static void WinningLog(int firstPrizeTotal, List<int> firstPrizeWinners, int secondPrizeTotal, int secondPrizeWinners, int thirdPrizeTotal, int thirdPrizeWinners)
+   public static void WinningLog(int totalPrizeMoney, int firstPrizeTotal, IReadOnlyCollection<int> firstPrizeWinners,
+      int secondPrizeTotal, int secondPrizeWinners, int thirdPrizeTotal, int thirdPrizeWinners)
    {
+      Console.WriteLine($"Our total money raised has been {totalPrizeMoney}");
+      Console.WriteLine();
       Console.WriteLine($"Main prize winner/s for {firstPrizeTotal:C} each:");
-      foreach (var person in firstPrizeWinners)
+      foreach (var id in firstPrizeWinners)
       {
-         Console.WriteLine(person);
+         Console.WriteLine($"Person Id: {id}");
       }
-
+      Console.WriteLine($"For a total of {(firstPrizeTotal * firstPrizeWinners.Count):C}!");
       Console.WriteLine();
       Console.WriteLine($"Total second prize spend is {secondPrizeTotal:C}, between {secondPrizeWinners} people");
       Console.WriteLine($"Total third prize spend is {thirdPrizeTotal:C} between {thirdPrizeWinners} people");

@@ -1,17 +1,15 @@
 ﻿namespace Lottery;
 
 public class LotteryMoney(
-   int ticketCost,
+   MoneyConfig mConfig,
    int totalTickets,
-   int thirdPrizeMoney,
-   int secondPrizeMoney,
    int thirdPrizeWinners,
    int secondPrizeWinners,
    int firstPrizeWinners)
 {
    public int GetMoneyPot()
    {
-      return (ticketCost * totalTickets) / 2;
+      return (mConfig.TicketCost * totalTickets) / 2;
    }
 
    public int GetFirstPrizePerPerson()
@@ -22,12 +20,14 @@ public class LotteryMoney(
 
    public int GetThirdPrizeMoney()
    {
-      return thirdPrizeMoney * thirdPrizeWinners;
+      if (thirdPrizeWinners == 0) return 0;
+      return mConfig.ThirdPrizeMoney * thirdPrizeWinners;
    }
 
    public int GetSecondPrizeMoney()
    {
-      return secondPrizeMoney * secondPrizeWinners;
+      if (secondPrizeWinners == 0) return 0;
+      return mConfig.SecondPrizeMoney * secondPrizeWinners;
    }
 
    public int GetFirstPrizeMoney()
