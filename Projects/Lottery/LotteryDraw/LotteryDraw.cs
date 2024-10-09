@@ -8,82 +8,86 @@ public enum WinKind
    ThirdPrize
 }
 
+// strategy-ish
+public interface IGetWinners
+{
+   IReadOnlyCollection<(int id, WinKind winKind)> GetWinners(
+      IEnumerable<(int id, Ticket ticket)> peopleCollection, Ticket winningTicket);
+}
+
+
+public class GetWinnersUsingList : IGetWinners
+{
+   public IReadOnlyCollection<(int id, WinKind winKind)> GetWinners(IEnumerable<(int id, Ticket ticket)> peopleCollection, Ticket winningTicket)
+   {
+      throw new NotImplementedException();
+   }
+}
+
+public class GetWinnersUsingYield : IGetWinners
+{
+   public IReadOnlyCollection<(int id, WinKind winKind)> GetWinners(IEnumerable<(int id, Ticket ticket)> peopleCollection, Ticket winningTicket)
+   {
+      throw new NotImplementedException();
+   }
+}
+
 public static class LotteryDraw
 {
-   public static IReadOnlyCollection<(Person person, WinKind winKind)> GetWinners(IReadOnlyCollection<(Person person, Ticket ticket)> peopleCollection, Ticket winningTicket)
+   public static IReadOnlyCollection<(int id, WinKind winKind)> GetWinners(IReadOnlyCollection<(int id, Ticket ticket)> peopleCollection, Ticket winningTicket)
    {
       return GetWinnersImpl(peopleCollection, winningTicket).ToArray();
    }
-   //public static List<(Person person, WinKind winKind)> GetWinners
-   //   (IReadOnlyCollection<(Person person, Ticket ticket)> peopleCollection, Ticket winningTicket)
-   //{
-   //   var list = new List<(Person, WinKind)>();
-   //   foreach (var (person, ticket) in peopleCollection)
-   //   {
-   //      var winKind = GetWin(GetMatches(ticket, winningTicket));
-   //      if (winKind != WinKind.None)
-   //      {
-   //         list.Add((person, winKind));
-   //      }
-   //   }
-   //   return list;
-   //}
 
-   public static IEnumerable<Person> GetThirdPrizeWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winnerCollection)
+   public static IEnumerable<int> GetThirdPrizeWinners(IReadOnlyCollection<(int id, WinKind winKind)> winnerCollection)
    {
-      foreach (var (person, winKind) in winnerCollection.Where(p => p.winKind == WinKind.ThirdPrize))
+      foreach (var (id, winKind) in winnerCollection.Where(p => p.winKind == WinKind.ThirdPrize))
       {
-         yield return person;
+         yield return id;
       }
    }
 
-   public static IEnumerable<Person> GetSecondPrizeWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winnerCollection)
+   public static IEnumerable<int> GetSecondPrizeWinners(IReadOnlyCollection<(int id, WinKind winKind)> winnerCollection)
    {
-      foreach (var (person, winKind) in winnerCollection.Where(p => p.winKind == WinKind.SecondPrize))
+      foreach (var (id, winKind) in winnerCollection.Where(p => p.winKind == WinKind.SecondPrize))
       {
-         yield return person;
+         yield return id;
       }
    }
 
-   public static IEnumerable<Person> GetFirstPrizeWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winnerCollection)
+   public static IEnumerable<int> GetFirstPrizeWinners(IReadOnlyCollection<(int id, WinKind winKind)> winnerCollection)
    {
-      foreach (var (person, winKind) in winnerCollection.Where(p => p.winKind == WinKind.FirstPrize))
+      foreach (var (id, winKind) in winnerCollection.Where(p => p.winKind == WinKind.FirstPrize))
       {
-         yield return person;
+         yield return id;
       }
    }
 
-   private static IEnumerable<(Person person, WinKind winKind)> GetWinnersImpl(IReadOnlyCollection<(Person person, Ticket ticket)> peopleCollection, Ticket winningTicket)
+   private static IEnumerable<(int id, WinKind winKind)> GetWinnersImpl(IReadOnlyCollection<(int id, Ticket ticket)> peopleCollection, Ticket winningTicket)
    {
-      foreach (var (person, ticket) in peopleCollection)
+      foreach (var (id, ticket) in peopleCollection)
       {
-         var winKind = GetWin(GetMatches(ticket, winningTicket));
+         var winKind = GetWin(ticket.GetMatches(winningTicket));
          if (winKind != WinKind.None)
          {
-            yield return (person, winKind);
+            yield return (id, winKind);
          }
       }
    }
-
 
    public static WinKind GetWin(int matches)
    {
       switch (matches)
       {
-         case 5:
+         case 4:
             return WinKind.ThirdPrize;
-         case 6:
+         case 5:
             return WinKind.SecondPrize;
-         case 7: 
+         case 6: 
             return WinKind.FirstPrize;
          default:
             return WinKind.None;
       }
-   }
-
-   public static int GetMatches(Ticket ticket, Ticket winningTicket)
-   {
-      return ticket.Numbers.Count(i => winningTicket.Numbers.Contains(i));
    }
 
 }

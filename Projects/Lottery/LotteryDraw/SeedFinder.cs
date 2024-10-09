@@ -1,23 +1,27 @@
 ﻿using System.Diagnostics;
+using System.IO;
 
 namespace Lottery;
 
-internal class LotteryApp
+internal class SeedFinder
 {
    // TO FIND THE SEEDS...
-   static void Main(string[] args)
+   public static void FindSeed()
    {
       Console.WriteLine("Starting now...");
       Console.WriteLine();
+
+      string docPath = "C:/src/CodePractice/Notes/Projects/Lottery/Winners.txt";
+
       var personFactory = new PersonFactory();
       var ticketFactory = new TicketFactory();
 
-      int ticketNumbers = 7;
+      int ticketNumbers = 6;
       int totalNumbers = 49;
-      int totalPlayers = 500000;
+      int totalPlayers = 10_000_000;
       int maxTicketsPerPerson = 6;
 
-      var seed = 20;
+      var seed = 0;
       bool canContinue = true;
 
       while (canContinue)
@@ -25,7 +29,7 @@ internal class LotteryApp
          var random = new Random(seed);
 
          var sim = new LotteryDrawSim
-         (random, personFactory, ticketFactory, ticketNumbers, totalNumbers,
+         (random, ticketFactory, ticketNumbers, totalNumbers,
             totalPlayers, maxTicketsPerPerson);
 
          var allTickets = sim.SimulatePlayers();
@@ -34,27 +38,25 @@ internal class LotteryApp
 
          var winners = LotteryDraw.GetWinners(allTickets, winningTicket);
 
-         if (seed % 100 == 0)
+         if (seed % 50 == 0)
          {
             Console.WriteLine($"Hit Milestone {seed}");
             Console.WriteLine();
          }
 
-         if (winners.Count(p => p.winKind == WinKind.FirstPrize) > 0)
+         var firstWinners = FirstWinners(winners);
+         if (firstWinners > 1)
          {
-            Console.WriteLine($"One winner: {seed}");
-         }
+            Console.WriteLine($"{firstWinners} winners at seed {seed}");
 
-         if (HasTwoFirstWinners(winners))
-         {
-            Console.WriteLine($"Two winners: {seed}");
-            canContinue = false;
+            using StreamWriter outputFile = File.AppendText(docPath);
+            outputFile.WriteLine($"{firstWinners} winners at seed {seed}");
          }
 
          seed++;
       }
 
-      bool HasTwoFirstWinners(IReadOnlyCollection<(Person person, WinKind winKind)> winners)
+      int FirstWinners(IReadOnlyCollection<(int id, WinKind winKind)> winners)
       {
          int count = 0;
          foreach (var element in winners)
@@ -62,7 +64,7 @@ internal class LotteryApp
             if (element.winKind == WinKind.FirstPrize) count++;
          }
 
-         return count >= 2;
+         return count;
       }
    }
 }

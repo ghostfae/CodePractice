@@ -1,23 +1,20 @@
 ﻿namespace Lottery;
 
-public class LotteryDrawSim (Random random, 
-   PersonFactory personFactory, TicketFactory ticketFactory,
+public class LotteryDrawSim (Random random, TicketFactory ticketFactory,
    int selectedNumbersAmount, int totalNumbers,
    int totalPlayers, int maxTicketsPerPerson)
 {
-   public List<(Person, Ticket)> SimulatePlayers()
+   public List<(int, Ticket)> SimulatePlayers()
    {
-      var list = new List<(Person, Ticket)> ();
+      var list = new List<(int, Ticket)> ();
 
       var currentPlayers = 0;
       while (currentPlayers < totalPlayers)
       {
-         var player = personFactory.GeneratePerson(random);
-
          var ticketsBought = random.Next(1, maxTicketsPerPerson);
          for (var i = 0; i < ticketsBought; i++)
          {
-             list.Add((player, GenerateTicket()));
+             list.Add((currentPlayers, GenerateTicket()));
          }
          currentPlayers++;
       }

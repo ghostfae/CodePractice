@@ -32,9 +32,9 @@ public class Tests
       var ticket3 = new Ticket([1, 2, 3, 4, 5, 6, 8]);
       var ticket4 = new Ticket([1, 2, 3, 4, 5, 8, 9]);
 
-      int matches1 = LotteryDraw.GetMatches(ticket1, ticket2);
-      int matches2 = LotteryDraw.GetMatches(ticket1, ticket3);
-      int matches3 = LotteryDraw.GetMatches(ticket1, ticket4);
+      int matches1 = ticket1.GetMatches(ticket2);
+      int matches2 = ticket1.GetMatches(ticket3);
+      int matches3 = ticket1.GetMatches(ticket4);
 
       Assert.That(matches1 == 7); 
       Assert.That(matches2 == 6); 
@@ -60,11 +60,12 @@ public class Tests
 
       // LOTTERY DRAW SIMULATION
       var sim = new LotteryDrawSim
-      (random, personFactory, ticketFactory, ticketNumbers, totalNumbers,
+      (random, ticketFactory, ticketNumbers, totalNumbers,
          totalPlayers, maxTicketsPerPerson);
 
-      var allTickets = sim.SimulatePlayers();
-      var winners = sim.SimulateDraw(allTickets);
+      var allTickets = sim.SimulatePlayers(); 
+      var winningTicket = sim.GenerateTicket();
+      var winners = LotteryDraw.GetWinners(allTickets, winningTicket);
 
       var thirdPrizeWinners = LotteryDraw.GetThirdPrizeWinners(winners);
       var secondPrizeWinners = LotteryDraw.GetSecondPrizeWinners(winners);

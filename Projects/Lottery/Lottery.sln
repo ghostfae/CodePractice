@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LotteryDraw", "LotteryDraw\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LotteryConsole", "LotteryConsole\LotteryConsole.csproj", "{BB8B300D-1142-499D-8703-71FD4A32D753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteryDrawStrategy", "LotteryDrawStrategy\LotteryDrawStrategy.csproj", "{3D9A5D88-703D-4ED5-977E-D9E65C8A57FA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{BB8B300D-1142-499D-8703-71FD4A32D753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB8B300D-1142-499D-8703-71FD4A32D753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB8B300D-1142-499D-8703-71FD4A32D753}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D9A5D88-703D-4ED5-977E-D9E65C8A57FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D9A5D88-703D-4ED5-977E-D9E65C8A57FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D9A5D88-703D-4ED5-977E-D9E65C8A57FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D9A5D88-703D-4ED5-977E-D9E65C8A57FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

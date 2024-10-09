@@ -2,6 +2,11 @@
 
 public static class Log
 {
+   public static void StartProgramLog()
+   {
+      Console.WriteLine("Starting...");
+   }
+
    public static void InitialLog(int ticketNumbers, int totalNumbers, int totalPlayers, int allTickets,
       int ticketCost, int maxTicketsPerPerson, int thirdPrizeMoney, int secondPrizeMoney)
    {
@@ -13,7 +18,7 @@ public static class Log
       Console.WriteLine();
    }
 
-   public static void WinningLog(int firstPrizeTotal, List<Person> firstPrizeWinners, int secondPrizeTotal, int secondPrizeWinners, int thirdPrizeTotal, int thirdPrizeWinners)
+   public static void WinningLog(int firstPrizeTotal, List<int> firstPrizeWinners, int secondPrizeTotal, int secondPrizeWinners, int thirdPrizeTotal, int thirdPrizeWinners)
    {
       Console.WriteLine($"Main prize winner/s for {firstPrizeTotal:C} each:");
       foreach (var person in firstPrizeWinners)

@@ -16,6 +16,7 @@ public class LotteryMoney(
 
    public int GetFirstPrizePerPerson()
    {
+      if (firstPrizeWinners == 0) return 0;
       return GetFirstPrizeMoney() / firstPrizeWinners;
    }
 
