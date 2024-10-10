@@ -1,0 +1,59 @@
+Markup languages -
+
+Markdown
+	- adds formatting to plaintext text documents
+	- is platform independent
+eg:
+	# Heading level 1
+	## Heading level 2
+	paragraphs are just plain text. use a blank line to seperate each line. don't tab in front, keep lines left-aligned.
+	&nbsp; is used to tab.
+	if you need to create a line break, end a line with two+ spaces and Enter.  
+	**bold text** can be indicated like __this__.
+	*italics* are like _this_.
+	***both*** are ___this___.
+	> This is a blockquote.
+	>> You can even nest them.
+	1. Things can be listed in an order like this
+	- Or like this...
+		- indented!
+	* this...
+	+ this
+	![alt text](/directory/images/image/png "hover over text")
+	`nano` makes the text look like code
+		code blocks are created with 4 spaces/one tab
+	horizontal lines are made as follows:
+	***
+	---
+	___
+	this creates a [LinkName](www.linkhere.com "Link tooltip")
+
+
+
+XML - eXtensible Markup Language
+	- does not DO anything; information wrapped in tags
+	- designed to carry data, focus on what the data is
+	- tags are invented by the author
+eg:
+	<document>
+	<title> this is an example </title>
+	<text> this describes this example </text>
+	</document>
+	
+	
+HTML - Hyper Text Markup Language
+	- standard markup language for Web page
+	- tells a browser how to display content, has predefined tags
+	- designed to display data, focus on aesthetics
+eg:
+	<!DOCTYPE html>
+	<html>
+	<body> 
+	<h1> heading 1 </h1>
+	<h2> heading 2 </h2>
+	<p> paragraph here </p>
+	<a href="linkaddress.com"> link </a>
+	<img src="sourcelink.jpg" alt="alt text" width="width in pixels" height="height in pixels">
+	</body>
+	</html>
+	

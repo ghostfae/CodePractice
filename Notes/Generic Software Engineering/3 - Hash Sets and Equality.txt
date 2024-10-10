@@ -1,0 +1,36 @@
+Fields:
+	a variable that is declared in a class or struct
+	typically private or protected members of container type
+		instance field - specific to each new type
+		static field - belongs to the type itself, can only be accessed through the type name
+Properties:
+	a public member that is implemented as an 'accessor' method {get; set;}
+	stays safe whilst being accessible from other classes
+	get; private set; - it can only be assigned within the class, but can be seen by other classes
+	get; init; - it can only be assigned during object creation, and can no longer be edited
+	required - property must be assigned, otherwise raises compiler error
+
+Equality:
+	== / != are tests of equality for 'simple' types (strings, primitives)
+	Reference types are compared with Equals(), which can be overridden; 
+		static method ReferenceEquals() sees if two objects are the same instance
+		
+Record:
+	stores data and is immutable; has no functionality
+	
+
+HashCode:
+	"A hash code is a numeric value that is used to identify an object during equality testing.
+	It can also serve as an index for an object in a collection."
+	
+	GetHashCode() returns a 32bit integer
+	hash code is used in Dictionary and HashSet classes to store/return specific objects
+	if two objects are equal, GetHashCode() must return the same value
+		if two objects are unequal, there is no guarantee that the values will be different - but it is unlikely
+	HashCode.Combine() combines values into one hashcode
+	
+	HashTables store key-value pairs, and returns null if something wants to access a non-existent key
+	Dictionaries do the same, but are generic; this means they require 'type parameters' <T> rather than later casting to type in implementation
+		however, they throw exceptions if something wants to access a non-existent key
+		
+	HashSets are collections that are unordered, and store unique elements; duplicate elements are not allowed

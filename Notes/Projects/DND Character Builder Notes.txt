@@ -1,0 +1,159 @@
+Personal Project Planning
+-----------------------------------------------------------------
+D&D Character Leveller:
+start with champion fighter
+
+
+NEEDS:
+	Character Sheet
+	Class
+	Subclass
+	Level
+	Spells
+	Background
+	Items
+	
+PLAN OF ACTION:
+	Make LVL 1 Character -
+		Name
+		[choose race] -> select proficiencies
+		Dice Roll [EXT: type of roll], allocation
+		[choose class] - > select class items, proficiencies
+		[choose background] - > select background items, proficiencies
+
+CHARACTER SHEET [CLASS]
+	Name, Class, Level, Background, Race, Alignment
+	Stats
+	Skills
+	AC
+	Initiative
+	Speed
+	HP (hit dice)
+	
+	Other Proficiencies
+	Equipment
+	
+	Attacks
+	Features & Traits
+	
+///////
+RACE [CLASS]
+	Ability Score Increase
+	Speed
+	Proficiencies
+	Languages
+	Race Features
+
+BACKGROUND [Class]
+	Skill Proficiencies
+	Tool Proficiencies
+	Languages
+	Equipment
+	Feature
+	
+CLASS [Class]
+	HP -
+		Hit Dice
+		Hit Points [1st Level]
+		Hit Points [at Higher Level]
+	PROFICIENCIES -
+		Armour
+		Weapons
+		Tools
+		Saving Throws
+		Skills
+	EQUIPMENT -
+		1
+		2
+		3 
+		4 (pack)
+	FEATURE/S
+	
+HIGHER LEVEL:
+	2nd - 
+	3rd - 
+	4th - ASI
+	5th - 
+	6th - 
+	7th - 
+	8th - ASI
+	9th - 
+	10th - 
+	11th - 
+	12th - ASI
+	13th - 
+	14th - 
+	15th - 
+	16th - ASI
+	17th - 
+	18th - 
+	19th - ASI
+	20th - 
+	
+SUBCLASS
+	Features
+
+///////
+Bob, Fighter, 1, Folk Hero, Human, Neutral Good, 
+
+HUMAN:
+	+1 to all
+	30 ft
+	NA
+	Common, +1 from list
+	NA
+
+FOLK HERO:
+	Animal Handling, Survival
+	One type of artisan's tools/land vehicles
+	NA
+	Artisans Tools/Shovel/Iron Pot/ Common Clothes/ Pouch of 10GP
+	Rustic Hospitality
+	
+FIGHTER:
+	HP -
+		d10
+		10 + con mod
+		d10 + con mod
+	PROFICIENCIES -
+		All Armour, Shields
+		Simple Weapons, Martial Weapons
+		NA
+		Strength, Constitution
+		Acrobatics/Animal Handling/Athletics/History/Insight/Intimidation/Perception/Survival
+	EQUIPMENT -
+		(a) chain mail or (b) leather, longbow, and 20 arrows
+		(a) a martial weapon and a shield or (b) two martial weapons
+		(a) a light crossbow and 20 bolts or (b) two handaxes
+		(a) a dungeoneer's pack or (b) an explorer's pack
+	FEATURE/S -
+		Fighting Style (Archery, Defence, Dueling, Great Weapon, Protection, Two Weapon)
+		Second Wind
+		
+FIGHTER HIGHER LEVEL:
+	2nd - Action Surge
+	3rd - Subclass
+	4th - ASI
+	5th - Extra Attack(x1), Proficiency Bonus(+3)
+	6th - ASI
+	7th - Subclass Feature
+	8th - ASI
+	9th - Indomitable(x1), Proficiency Bonus(+4)
+	10th - Subclass Feature
+	11th - Extra Attack(x2)
+	12th - ASI
+	13th - Indomitable(x2), Proficiency Bonus(+5)
+	14th - ASI
+	15th - Subclass Feature
+	16th - ASI
+	17th - Action Surge(x2), Indomitable(x3), Proficiency Bonus (+6)
+	18th - Subclass Feature, Proficiency Bonus(+6)
+	19th - ASI
+	20th - Extra Attack(x3)
+
+FIGHTER: CHAMPION:
+	3rd - Improved Critical
+	7th - Remarkable Athlete
+	10th - Fighting Style
+	15th - Superior Critical
+	18th - Survivor

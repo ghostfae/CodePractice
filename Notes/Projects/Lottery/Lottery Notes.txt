@@ -1,0 +1,67 @@
+Lottery Notes -
+TODO: Config for sim
+-------------------------
+500,000 participants:
+SEED:
+1 Winner =>
+	seed 17
+2 Winners =>
+	seed 30
+-------------------------
+for 1,000,000 participants:
+SEED:
+1 Winner =>
+	16, 20, 29, 32, 82, 113, 124, 159, 225, 280, 281
+
+2 Winners =>
+	89, 94, 100, 112, 148
+-------------------------
+10,000,000 participants:
+SEED:
+2 Winners => 
+	8, 9, 12, 15
+3 Winners => 
+	5, 10, 13, 19
+4 Winners => 
+	1, 7, 11, 17
+.....
+7 Winners => 
+	6
+	
+RESULTS:
+Seed 1, 2.83 seconds
+-------------------------
+//public class Ticket_HashSet
+//{
+//   public IReadOnlyCollection<int> Numbers => _numbers;
+//   private readonly HashSet<int> _numbers;
+
+//   public Ticket(IEnumerable<int> numbers)
+//   {
+//      _numbers = numbers.ToHashSet();
+//   }
+
+//   public override bool Equals(object? obj)
+//   {
+//      if (obj == null || !(obj is Ticket ticket))
+//         return false;
+
+//      return _numbers.SetEquals(ticket._numbers);
+//   }
+
+//   public override int GetHashCode()
+//   {
+//      return _numbers.GetHashCode();
+//   }
+
+
+//   public override string ToString()
+//   {
+//      return string.Join(", ", Numbers);
+//   }
+
+//   public int GetMatches(Ticket winningTicket)
+//   {
+//      return Numbers.Count(i => winningTicket.Numbers.Contains(i));
+//   }
+//}
