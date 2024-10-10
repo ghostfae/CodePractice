@@ -33,10 +33,13 @@ then ireadonlycollection
 
 tuples, anonymous objects: 
 tuple deconstruction
+tuple naming
 
 design process - iterative/evolving design
 
+minimax/ alpha-beta pruning
 
+calculating execution time in editors
 ///
 
 Interfaces and base classes represent two different forms of relationships.
