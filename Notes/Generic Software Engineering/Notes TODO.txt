@@ -1,4 +1,6 @@
 TODO:
+	- XML docs for all
+
 	- CombatState - array of round, current position
 				simulate each spell, have score
 				call pattern - CS -> Attacker, Target, Spell; 

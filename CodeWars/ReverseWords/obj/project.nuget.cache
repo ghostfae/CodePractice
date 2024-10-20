@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kqHP7EAawx1V/PsZgKV7dmD9kDhq/Eezdm3pqeC1V1PJ5zZRM3BJrOOBLM8fR+nUBhsQSxxIBj4mKmMQSE3IpA==",
+  "dgSpecHash": "tdEughIsRQJEFVnLSp/SYXjGz62X6ieFTVsylATTQqoO9sqiqB/gt8jPtSCaGkAV3BxK/4WYhTroJCpNnD4/RA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kat\\Documents\\GitHub\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj",
+  "projectFilePath": "C:\\src\\CodePractice\\CodeWars\\ReverseWords\\ReverseWords.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kat\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Kat\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

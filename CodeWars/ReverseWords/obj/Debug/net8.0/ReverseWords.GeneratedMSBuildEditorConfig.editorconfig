@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ReverseWords
-build_property.ProjectDir = C:\Users\Kat\Documents\GitHub\CodePractice\CodeWars\ReverseWords\
+build_property.ProjectDir = C:\src\CodePractice\CodeWars\ReverseWords\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
