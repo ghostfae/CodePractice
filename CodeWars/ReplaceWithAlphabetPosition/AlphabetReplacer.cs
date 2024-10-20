@@ -11,6 +11,18 @@ public static class AlphabetReplacer
          .Where(char.IsAsciiLetter)
          .Select(c => c - 'A' + 1)
          .ToArray();
+      return string.Join(' ', result);
+   }
+
+   public static string AlphabetPosition2(string text)
+   {
+      var result = new List<int>();
+
+      foreach (var c in text.ToUpper())
+      {
+         if (c <= 'Z' && c >= 'A')
+            result.Add(c - 'A' + 1);
+      }
 
       return string.Join(' ', result);
    }
