@@ -1,0 +1,47 @@
+WHAT IS NEEDED FOR AN ENTRY LEVEL PROGRAMMING JOB:
+
+Quickstart.com - 
+"Using remote data
+Performing operations asynchronously
+Integrating with unmanaged code
+Creating custom attributes
+Building new data types
+Handling events
+Programming the user interface
+Accessing a database
+Encrypting and decrypting data"
+
+.NET development
+
+QUORA -
+
+Bot -
+C# Syntax and Language Fundamentals: 
+	Strong understanding of C# syntax, data types, variables, operators, control flow structures (if-else, loops, etc.), and exception handling.
+	
+Object-Oriented Programming (OOP): 
+	Familiarity with OOP principles such as classes, inheritance, polymorphism, encapsulation, and interfaces.
+	
+Collections and LINQ: 
+	Knowledge of C# collections (arrays, lists, dictionaries, etc.) and the Language-Integrated Query (LINQ)
+	framework for data manipulation and querying.
+	
+.NET Framework/Core: 
+	Familiarity with the .NET platform, including the .NET Framework or .NET Core, and common .NET class libraries and APIs.
+	
+Windows Forms or WPF: 
+Experience with building Windows desktop applications using either Windows Forms or Windows Presentation Foundation (WPF).
+
+ASP.NET (optional): 
+	For web development roles, knowledge of ASP.NET (Web Forms or MVC) or ASP.NET Core is beneficial.
+
+Entity Framework (optional):
+	Understanding of the Entity Framework, a popular Object-Relational Mapping (ORM) tool for data access in C# applications.
+
+Unit Testing: 
+	Familiarity with unit testing frameworks like NUnit or MSTest, and the ability to write testable code.
+-----
+"Build projects with a database, login/user registration, permissions (admins/clients),
+	nice UI, github repository and deploy it on a windows azure machine for others to see."
+-----
+

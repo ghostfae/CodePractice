@@ -1,0 +1,27 @@
+TODO:
+	- XML docs for all
+
+	- CombatState - array of round, current position
+				simulate each spell, have score
+				call pattern - CS -> Attacker, Target, Spell; 
+				CombatState CastSpell(CombatState, attacker, target, spell)
+	- Behaviour - always do most damage, but if they are below 50% health? heal
+	- consoleapp - test 1000 times, change until they are about 50/50 chance
+				
+///
+RESEARCH: 
+default ctor
+private set vs init
+readonlycollection/enumerables
+
+.NET Framework
+	- what it is and understanding it
+	- clr
+	- .net libraries and apis
+	- asp.net
+	- entity framework (ef)
+	- nuget
+	- cross-platform development
+	- cloud and microservices (Azure)
+	- testing and debugging (mstest, nunit, the differences)
+	- devops and ci/cd

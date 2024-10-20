@@ -1,0 +1,37 @@
+Battle System
+
+NOTES:
+- create new objects instead of editing existing
+	BECAUSE we need an ability to parallelise simulation;
+	parallel threads should not interfere with each other
+
+
+DONE:
+- merge round state into state, make sure test works
+- replace usage of unit with usage of unit state in combat, unit should only remain in initial setup
+- extract combat runner class from combat
+- combat listener/combat log should be 'injectable' to combat runner - nullable?
+- add uid to each unit, update builder/factory
+- replace combat list of units with dictionary of units, keyed by uid 
+	- Dictionary<int, Unit>]
+- all combat methods that modify unit state should return modified combat state
+	- combat should have 'modify state' method, accepting unit states it wants to update, returning modified clone of itself
+- unit state should not modify itself; it should return a modified clone of itself
+- freeze duration does not end
+- have unit return modified clone itself; remove builder entirely
+- over time effects fix; timed spell should cloned;
+- fix markastakenturn()
+- fix balance console
+
+TODO:
+- separate upkeep over time from calculation + application?
+
+- do tests
+
+- balance console interfaces (1v1 vs 2v2), use strategy pattern
+
+- comments for all methods
+
+- estimate score for a given colour, returns int
+
+- 100 random options instead of all options

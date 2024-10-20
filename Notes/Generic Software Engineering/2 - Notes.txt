@@ -1,0 +1,22 @@
+Git - Version control system. Tracks changes in code, allows multiple developers to work on code simultaneously
+
+null - nothing value. is a mistake because it causes bugs due to:
+- null pointer exception (program tries to access null reference, leading to crashes)
+- ambiguity (non-specific type)
+- must be handled
+- security risk (unintended access to memory)
+
+string - collection of characters
+immutable (any modification creates new strings) vs mutable (modification affects current string)
+
+
+arrays - fixed collection of variables
+
+
+runtime - execution of programs (C# runtime/Common Language Runtime/CLR)
+- converts language to machine code
+- manages memory
+- ensures code runs safely
+- handles exceptions
+
+static 
