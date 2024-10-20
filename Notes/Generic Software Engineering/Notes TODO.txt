@@ -1,4 +1,6 @@
 TODO:
+	- XML docs for all
+
 	- CombatState - array of round, current position
 				simulate each spell, have score
 				call pattern - CS -> Attacker, Target, Spell; 
@@ -10,6 +12,7 @@ TODO:
 RESEARCH: 
 default ctor
 private set vs init
+readonlycollection/enumerables
 
 .NET Framework
 	- what it is and understanding it
