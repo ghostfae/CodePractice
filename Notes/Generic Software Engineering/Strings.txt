@@ -1,0 +1,22 @@
+STRINGS:
+	Immutable type - cannot be changed once created; any modification creates a new string
+	Encoding
+	
+String Methods -
+
+StringBuilder - System.Text
+	"Represents a mutable string of characters."
+	StringBuilder (string)/ (string, int characterLimit)
+	
+	Methods:
+		.Append(char array)/(char)/(string)
+			.AppendLine (as above)
+		.AppendFormat("{format:type}", char/string)
+		.Insert(int index, string/char)
+		
+			
+		.ToString() - STRINGBUILDER IS NOT THE STRING SO MUST BE USED
+		
+	When to use it:
+		"concatenating in a non-trivial loop" (stackoverflow)
+		"concatenating an arbitrary amount of string values"

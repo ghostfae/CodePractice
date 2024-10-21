@@ -7,9 +7,10 @@ public static class Masker
    {
       return cc.Length >= 4 
          ? new string
-            ('#', cc.Length - 4) + cc.Substring(cc.Length - 4)
+            ('#', cc.Length - 4) + cc[^4..]
          : cc;
    }
+
    public static string MaskifyOld(string cc)
    {
       if (cc.Length >= 4)
