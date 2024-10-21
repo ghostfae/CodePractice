@@ -1,0 +1,56 @@
+OCTOBER REVISION:
+
+	- Get all mentions from existing documents and copy here
+	- Strings: encoding, immutability, StringBuilder, 
+		string methods - static method (e.g. string.join) and
+			instant/extension methods (ext method = static method 
+			that lets you use syntax as if it was instance method
+			e.g. new class that has static method with parameter 'this string x')
+		know all methods by heart
+	- Char: UTF-16
+	- all static/extension/instance members
+	
+	- value vs reference types, heap, stack
+    - heap fragmentation
+
+    - public/internal/private/protected and combos
+	- sealed
+	- readonly, static
+	
+	- array, list, dictionary, hashset
+	- stack, deque, queue, sorted list, sorted dictionary?
+	- immutable dictionary etc
+	- concurrent data structures (ConcurrentDirctionary etc) - know they exist
+	
+    - IEnumerable, yield, foreach, linq
+	
+    - KeyValuePair, tuples, anonymous types
+	
+	- Factory, Builder patterns
+	
+	- params[]
+	
+	- interfaces
+	
+	- listener
+	
+	- enums
+	- nullable
+	
+	- cloning/deep cloning
+	
+	- if/else, switch - control flow
+	
+	- integer and math operations
+	
+	- random
+	
+	- console.readline, .writeline
+	
+	- class v struct
+	
+	- bool
+	
+	- bitewise, bitmasks
+	
+	- debug assert (nunit tests)
