@@ -1,4 +1,8 @@
 TODO:
+
+	- events, threading, async, flow
+	- np complete
+
 	- XML docs for all
 
 	- CombatState - array of round, current position
