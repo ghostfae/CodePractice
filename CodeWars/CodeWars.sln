@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GiftCode", "GiftCode\GiftCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReplaceWithAlphabetPosition", "ReplaceWithAlphabetPosition\ReplaceWithAlphabetPosition.csproj", "{4AFE2F66-84EE-45E9-A7B4-3DBB6BDF9E88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credit Card Mask", "Credit Card Mask\Credit Card Mask.csproj", "{FFDE0BF0-8361-44F6-9658-8CAA6B5B0767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Credit Card Mask", "Credit Card Mask\Credit Card Mask.csproj", "{FFDE0BF0-8361-44F6-9658-8CAA6B5B0767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListFiltering", "ListFiltering\ListFiltering.csproj", "{1305CF34-7337-4B3E-A4BD-E2D258C1091D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{FFDE0BF0-8361-44F6-9658-8CAA6B5B0767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFDE0BF0-8361-44F6-9658-8CAA6B5B0767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFDE0BF0-8361-44F6-9658-8CAA6B5B0767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1305CF34-7337-4B3E-A4BD-E2D258C1091D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1305CF34-7337-4B3E-A4BD-E2D258C1091D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1305CF34-7337-4B3E-A4BD-E2D258C1091D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1305CF34-7337-4B3E-A4BD-E2D258C1091D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
