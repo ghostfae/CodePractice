@@ -24,6 +24,10 @@ DONE:
 - fix balance console
 
 TODO:
+
+- unit testing for (kill in -x- rounds, 1v1)
+
+////
 - separate upkeep over time from calculation + application?
 
 - do tests
