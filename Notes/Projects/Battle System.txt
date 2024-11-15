@@ -1,9 +1,39 @@
 Battle System
 
+group by scored action:
+{warrior veronica, frostbolt, 154}
+{mage zila, health potion, 10}
+{warrior veronica, frostbolt, 100}
+
+grouping
+IEnumerable
+key, elements
+key, elements
+
+
+<warrior veronica, frostbolt>, [{warrior veronica, frostbolt, 154}, {warrior veronica, frostbolt, 100}]
+<mage zila, health potion> [{mage zila, health potion, 10}]
+
+
+
+
+
 NOTES:
 - create new objects instead of editing existing
 	BECAUSE we need an ability to parallelise simulation;
 	parallel threads should not interfere with each other
+- recursion:
+	a function that calls itself. must have an exit so it doesn't go on forever
+	DFS: visits nodes as deep as possible, then backtracks
+		steps:
+		1. start at root
+		2. mark current node as visited
+		3. explore each unvisited neighbour by recursively applying dfs algo
+		4. backtrack to previous node if there are no other branches
+		5. repeat 2-4 until everything has been visited
+- aspects to design
+	- product
+	- 
 
 
 DONE:
@@ -25,6 +55,7 @@ DONE:
 
 TODO:
 
+- extract non-top 10 to strategy, base class?
 - unit testing for (kill in -x- rounds, 1v1)
 
 ////
@@ -36,6 +67,6 @@ TODO:
 
 - comments for all methods
 
-- estimate score for a given colour, returns int
+FUTURE TODO:
 
-- 100 random options instead of all options
+- polish and buff; optimisation (performance/memory); profiling/benchmarking

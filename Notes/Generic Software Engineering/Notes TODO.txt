@@ -12,7 +12,7 @@ TODO:
 	- Behaviour - always do most damage, but if they are below 50% health? heal
 	- consoleapp - test 1000 times, change until they are about 50/50 chance
 				
-///
+/// 
 RESEARCH: 
 default ctor
 private set vs init

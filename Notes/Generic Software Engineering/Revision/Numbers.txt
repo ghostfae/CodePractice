@@ -1,0 +1,66 @@
+NUMBERS: 
+	each of these is a value type
+----------------------------------------------
+INTEGERS:
+Types:
+	sbyte: 
+		signed 8-bit integer
+		-128 to 127
+	byte: 
+		unsigned 8-bit integer
+		0 to 255 
+	short:
+		signed 16-bit integer
+		-32,768 to 32,767	
+	ushort:
+		unsigned 16-bit integer
+		0 to 65,535	
+	int:
+		signed 32-bit integer
+		-2,147,483,648 to 2,147,483,647	
+	uint:
+		unsigned 32-bit integer
+		0 to 4,294,967,295	
+	long:
+		signed 64-bit integer
+		-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807	
+	ulong:
+		unsigned 64-bit integer
+		0 to 18,446,744,073,709,551,615	
+	nint:
+		native signed integer (32 or 64 bit)
+	nuint:
+		native unsigned integer (32 or 64 bit)
+			(to get min/max values at runtime use .MinValue/.MaxValue)
+		
+Integer Literals:
+	decimal - default, no prefix (e.g. 42)
+	hexadecimal - 0x or 0X prefix (e.g. 0x2A)
+	binary - 0b or 0B prefix (e.g. 0b_0010_1010)
+	
+	they are always positive. can cast to other types to add signs
+----------------------------------------------
+FLOATING POINTS:
+Types:
+	float: (approximate type)
+		4 bytes
+		~6-9 digits
+	double:
+		8 bytes
+		~15-17 digits
+	decimal: (specific type)
+		16 bytes
+		28-29 digits
+		
+Real Literals:
+	double - d or D suffix (e.g. 3d)
+	float - f or F suffix (e.g. 3.5F)
+	decimal - m or M suffix (e.g. 400.75m)
+	
+	only float and double can be implicitly cast
+----------------------------------------------
+METHODS:
+	Clamp(max value, min value) - clamps to the min/max inclusive
+	CopySign(int A, int B) - copies sign from 'A' to 'B'
+	Max(int A, int B) / Min(int A, int B) - returns the max/min value
+	

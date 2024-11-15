@@ -1,12 +1,7 @@
 OCTOBER REVISION:
 
 	- Get all mentions from existing documents and copy here
-	- Strings: encoding, immutability, StringBuilder, 
-		string methods - static method (e.g. string.join) and
-			instant/extension methods (ext method = static method 
-			that lets you use syntax as if it was instance method
-			e.g. new class that has static method with parameter 'this string x')
-		know all methods by heart
+	
 	- Char: UTF-16
 	- all static/extension/instance members
 	
@@ -22,7 +17,7 @@ OCTOBER REVISION:
 	- immutable dictionary etc
 	- concurrent data structures (ConcurrentDirctionary etc) - know they exist
 	
-    - IEnumerable, yield, foreach, linq
+    - IEnumerable, yield, foreach,
 	
     - KeyValuePair, tuples, anonymous types
 	
@@ -41,7 +36,7 @@ OCTOBER REVISION:
 	
 	- if/else, switch - control flow
 	
-	- integer and math operations
+	-  and math operations
 	
 	- random
 	
@@ -54,3 +49,27 @@ OCTOBER REVISION:
 	- bitewise, bitmasks
 	
 	- debug assert (nunit tests)
+	
+	
+	- complexity
+	- logs (a level maths)
+	
+	- binary search
+	
+DONE:
+	- Strings: encoding, immutability, StringBuilder, 
+		string methods - static method (e.g. string.join) and
+			instant/extension methods (ext method = static method 
+			that lets you use syntax as if it was instance method
+			e.g. new class that has static method with parameter 'this string x')
+		know all methods by heart
+		
+	- integer
+	
+	- linq
+	
+	
+	/// yield return is a state machine; if nobody 'Take's it, it stops
+	/// async code as well
+	
+	/// maths needed for computer science

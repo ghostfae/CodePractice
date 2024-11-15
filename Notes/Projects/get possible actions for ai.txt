@@ -1,0 +1,33 @@
+get possible actions for AI
+
+private IEnumerable<(UnitState target, Spell spell)> GetPossibleActions(CombatState combatState, UnitState caster)
+{
+   var allies = combatState
+      .GetAliveUnits()
+      .Where(u => u.Side == caster.Side).ToArray();
+
+   var enemies = combatState
+      .GetAliveUnits()
+      .Where(u => u.Side != caster.Side).ToArray();
+
+   foreach (var spell in caster.TimedSpells
+               .Where(spell => spell.CooldownTimer == 0)
+               .ToList())
+   {
+      switch (spell.Spell.SpellEffect.IsHarm)
+      {
+         case true when enemies.Length > 0:
+         {
+            foreach (var target in enemies)
+               yield return (target, spell.Spell);
+            break;
+         }
+         case false when allies.Length > 0:
+         {
+            foreach (var target in allies)
+               yield return (target, spell.Spell);
+            break;
+         }
+      }
+   }
+}

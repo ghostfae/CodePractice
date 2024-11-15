@@ -1,0 +1,69 @@
+LINQ:
+
+Filtering 
+	- Where (filters sequence based on a condition)
+	- OfType (filters sequence based on type)
+	
+Transform
+	- Select (transforms each element in a sequence)
+	
+Sorting
+	- OrderBy (sorts a sequence in order of given variable)
+	- OrderByDescending (sorts a sequence in reverse order of given variable)
+	
+Grouping 
+	- GroupBy (create groupings by common attribute)
+	
+	- GroupJoin (joins two sequences and groups the result by matching keys)
+Joining
+	- Join (combines two sequences based on matching key)
+	
+Select Unique Element
+	- Distinct (removes duplicate elements)
+	
+Aggregating
+	- Sum
+	- Average
+	- Count
+	- Max
+	- Min
+	
+Flatten Nested Sequence
+	- SelectMany (each element projected into a collection and flattens sequence)
+	
+Checking Existence
+	- Any (check if any elements satisfy a condition)
+	- All (check if all elements satisfy a condition)
+	
+Getting Elements
+	- First (always gets first element)
+	- FirstOrDefault (gets first element, or default[null] if none are found)
+	- Single (ensures there is exactly one element matching a condition; returns element or throws exception)
+	- Last (always gets the last element in a sequence)
+	- LastOrDefault (gets last element, or default[null] if none are found)
+	
+Pagination
+	- Skip (skips set number of elements)
+	- Take (takes the next set)
+	
+Concatenation
+	- Concat (combines two sequences into one)
+	
+Set Operations
+	- Union (get set union of two sequences by using default equality comparer; removes duplicate elements and combines them)
+	- Intersect (get set intersection of two sequences; the set that contains all elements that appear in both A and B)
+	- Except (get set exclusion of two sequences; creates a set of elements that are unique to A or B, but not both)
+	
+Element At Position:
+	- ElementAt (get element at specified position)
+	- ElementAtOrDefault (get element at specified position or default[null] if nothing is there)
+	
+Reverse Sequence
+	- Reverse (reverses order of elements in sequence)
+Combine Sequences
+	- Zip (combines two sequences - combines elements with the same index)
+	
+Conditional Methods
+	- TakeWhile (take elements from beginning of sequence as long as a condition is true)
+	- SkipWhile (skip elements as long as a condition is true, then returns the remaining elements)
+	
