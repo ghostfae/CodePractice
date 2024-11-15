@@ -1,4 +1,4 @@
-namespace TestProject1
+namespace HasRemainder
 {
    public class Tests
    {

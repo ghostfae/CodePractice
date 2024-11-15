@@ -28,9 +28,6 @@ public static class FibonacciGen
       // ReSharper disable once IteratorNeverReturns
    }
 
-
-
-
    public static IEnumerable<T> Add1<T>(this IEnumerable<T> input) where T : INumber<T>
    {
       return input.Select(i => i + T.CreateChecked(1L));
