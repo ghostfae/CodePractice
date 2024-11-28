@@ -1,0 +1,15 @@
+C:\src\CodePractice\Typo\Typo\bin\Debug\net8.0\Typo.exe
+C:\src\CodePractice\Typo\Typo\bin\Debug\net8.0\Typo.deps.json
+C:\src\CodePractice\Typo\Typo\bin\Debug\net8.0\Typo.runtimeconfig.json
+C:\src\CodePractice\Typo\Typo\bin\Debug\net8.0\Typo.dll
+C:\src\CodePractice\Typo\Typo\bin\Debug\net8.0\Typo.pdb
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.AssemblyInfoInputs.cache
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.AssemblyInfo.cs
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.csproj.CoreCompileInputs.cache
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.sourcelink.json
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.dll
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\refint\Typo.dll
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.pdb
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\Typo.genruntimeconfig.cache
+C:\src\CodePractice\Typo\Typo\obj\Debug\net8.0\ref\Typo.dll
