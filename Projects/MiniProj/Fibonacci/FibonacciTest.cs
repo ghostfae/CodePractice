@@ -1,38 +1,6 @@
-using System.Numerics;
-
 namespace Fibonacci;
 
 // Create generic?
-public static class FibonacciGen
-{
-   public static IEnumerable<long> Generate(int length)
-   {
-      return Generate().Take(length);
-   }
-
-   public static IEnumerable<long> Generate() // infinite
-   {
-      var a = 1;
-      yield return a;
-      var b = 1;
-      yield return b;
-
-      while (true)
-      {
-         var c = a + b;
-         yield return c;
-
-         a = b;
-         b = c;
-      }
-      // ReSharper disable once IteratorNeverReturns
-   }
-
-   public static IEnumerable<T> Add1<T>(this IEnumerable<T> input) where T : INumber<T>
-   {
-      return input.Select(i => i + T.CreateChecked(1L));
-   }
-}
 
 public class Tests
 {
@@ -52,5 +20,61 @@ public class Tests
       CollectionAssert.AreEqual(new[] { 2, 2, 3, 4, 6 }, FibonacciGen.Generate(5).Add1());
 
       CollectionAssert.AreEqual(new []{1, 1, 2, 3, 5}, FibonacciGen.Generate(5));
+   }
+
+   [Test]
+   public void SumTest()
+   {
+      var values = new[] { 1, 2, 3, 4, 5 };
+      var expected = 15;
+
+      Assert.That(values.Sum2(), Is.EqualTo(expected));
+   }
+
+   [Test]
+   public void MaximumTest()
+   {
+      var values = new[] { 1, 2, 3, 4, 5, 3, -1, 0 };
+      var expected = 5;
+
+      Assert.That(values.Maximum(), Is.EqualTo(expected));
+   }
+
+   [Test]
+   public void ConcatenateTest()
+   {
+      var values = new[] { "hi", "hello", "hey" };
+      var delimiter = ", ";
+      var expected = "hi, hello, hey";
+
+      Assert.That(values.ConcatenateString(delimiter), Is.EqualTo(expected));
+   }
+
+   [Test]
+   public void ConcatenateTest2()
+   {
+      var values = new[] { 'h', 'e', 'y' };
+      var delimiter = ',';
+      var expected = "h,e,y";
+
+      Assert.That(values.ConcatenateString(delimiter), Is.EqualTo(expected));
+   }
+
+   [Test]
+   public void ReverseNumTest()
+   {
+      var values = new[] { 1, 2, 3, 5, 7 };
+      var expected = new[] { 7, 5, 3, 2, 1 };
+
+      Assert.That(values.Reverse(), Is.EqualTo(expected));
+   }
+
+   [Test]
+   public void ReverseStringTest()
+   {
+      var values = new[] { "a", "b", "c", "d" };
+      var expected = new[] {"d", "c", "b", "a"};
+
+      Assert.That(values.Reverse(), Is.EqualTo(expected));
    }
 }
